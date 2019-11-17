@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const UnaccessibleForm = () => {
+export const InaccessibleForm = () => {
     const handleSubmit = (e) => {
         console.log(e);
         e.preventDefault();

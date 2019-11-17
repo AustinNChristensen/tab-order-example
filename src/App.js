@@ -1,22 +1,21 @@
 import React, { useState } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { UnaccessibleForm } from './UnaccessibleForm';
+import { InaccessibleForm } from './InaccessibleForm';
 import { AccessibleForm } from './AccessibleForm';
 
 const App = () => {
-  const [unaccessibleVisible, setUnaccessibileVisible] = useState(true);
+  const [inaccessibleVisible, setInaccessibleVisible] = useState(true);
 
   let content;
 
-  if (unaccessibleVisible) {
-    content = <UnaccessibleForm />;
+  if (inaccessibleVisible) {
+    content = <InaccessibleForm />;
   } else {
     content = <AccessibleForm />;
   }
   return (
     <main>
-      <button onClick={() => setUnaccessibileVisible(!unaccessibleVisible)}>{`${unaccessibleVisible ? 'Switch to Accessible Version' : 'Switch to Unaccessible Version'}`}</button>
+      <button onClick={() => setInaccessibleVisible(!inaccessibleVisible)}>{`${inaccessibleVisible ? 'Switch to Accessible Version' : 'Switch to Inaccessible Version'}`}</button>
       {content}
     </main>
   );
