@@ -10,7 +10,12 @@ export const AccessibleForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        e.target.parentNode.reset();
+        if (invalidString || invalidEmail) {
+            setAlertOpen(true);
+            setAlertText('Cannot submit, due to invalid inputs!');
+        } else {
+            e.target.parentNode.reset();
+        }
     }
 
     const validateString = (e) => {
