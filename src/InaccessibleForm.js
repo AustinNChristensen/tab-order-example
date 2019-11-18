@@ -7,7 +7,7 @@ export const InaccessibleForm = () => {
         e.target.parentNode.reset();
     }
     return (
-        <form onSumbit={handleSubmit} className='form'>
+        <form onSubmit={handleSubmit} className='form'>
             <div className='row'>
                 <div className='input'>
                     <label htmlFor='firstNameInput'>
@@ -35,13 +35,13 @@ export const InaccessibleForm = () => {
                     <label htmlFor='birthdayInput'>
                         Birthday
                     </label>
-                    <input id='birthdayInput' type='date' value='1990-01-01' required />
+                    <input id='birthdayInput' type='date' required />
                 </div>
                 <div className='input'>
                     <label htmlFor='continentInput'>
                         Continent
                     </label>
-                    <select id='continentInput' value='North America' required>
+                    <select id='continentInput' required>
                         <option value='Africa'>Africa</option>
                         <option value='Antarctica'>Antarctica</option>
                         <option value='Asia'>Asia</option>
@@ -58,20 +58,19 @@ export const InaccessibleForm = () => {
                 </p>
                 <div className='genderRow'>
                     <div className='input'>
-                        <label aria-describedBy='genderLabel'>
+                        <label aria-describedby='genderLabel'>
                             Male
                             <input id='maleInput' type='radio' name='gender' required/>
                         </label>
                     </div>
                     <div className='input'>
-                        <label aria-describedBy='genderLabel'>
+                        <label aria-describedby='genderLabel'>
                             Female
                             <input id='femaleInput' type='radio' name='gender' required />
                         </label>
                     </div>
                 </div>
-            </div>
-            <input type='hidden' value='secretCode!'/>
+            </div>/>
             <button type='submit' onClick={handleSubmit} className='submitButton'>Submit</button>
         </form>
     );

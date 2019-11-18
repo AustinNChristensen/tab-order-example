@@ -4,7 +4,7 @@ import { InaccessibleForm } from './InaccessibleForm';
 import { AccessibleForm } from './AccessibleForm';
 
 const App = () => {
-  const [inaccessibleVisible, setInaccessibleVisible] = useState(true);
+  const [inaccessibleVisible, setInaccessibleVisible] = useState(false);
 
   let content;
 
